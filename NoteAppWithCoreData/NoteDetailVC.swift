@@ -22,15 +22,15 @@ class NoteDetailVC: UIViewController, UITextViewDelegate {
         descTV.layer.cornerRadius = 10
         descTV.layer.borderColor = UIColor.systemGray3.cgColor
         
-        descTV.text = "write your tasks here..."
-        descTV.textColor = UIColor.lightGray
-        descTV.returnKeyType = .done
-        
         descTV.delegate = self
         
         if(selectedNote != nil) {
             titleTF.text = selectedNote?.title
             descTV.text = selectedNote?.desc
+        } else {
+            descTV.text = "write your tasks here..."
+            descTV.textColor = UIColor.lightGray
+            descTV.returnKeyType = .done
         }
     }
     
@@ -40,14 +40,14 @@ class NoteDetailVC: UIViewController, UITextViewDelegate {
             textView.textColor = UIColor.black
         }
     }
-    
-    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-        if text == "\n" {
-            textView.resignFirstResponder()
-        }
-        return true
-    }
-    
+
+//    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+//        if text == "\n" {
+//            textView.resignFirstResponder()
+//        }
+//        return true
+//    }
+
     func textViewDidEndEditing(_ textView: UITextView) {
         if textView.text == "" {
             descTV.text = "write your tasks here..."

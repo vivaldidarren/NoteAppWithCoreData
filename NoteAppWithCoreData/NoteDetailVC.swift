@@ -18,8 +18,8 @@ class NoteDetailVC: UIViewController, UITextViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        descTV.layer.borderWidth = 0.5
-        descTV.layer.cornerRadius = 10
+//        descTV.layer.borderWidth = 0.5
+//        descTV.layer.cornerRadius = 10
         descTV.layer.borderColor = UIColor.systemGray3.cgColor
         
         descTV.delegate = self

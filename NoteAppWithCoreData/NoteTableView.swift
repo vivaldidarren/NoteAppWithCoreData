@@ -26,7 +26,6 @@ class NoteTableView: UITableViewController {
     }
     
     override func viewDidLoad() {
-        
         if(firstLoad) {
             firstLoad = false
             let appDelegate = UIApplication.shared.delegate as! AppDelegate

@@ -113,7 +113,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task List" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KtC-4l-r9N">
-                                <rect key="frame" x="20" y="141.66666666666666" width="350" height="28.333333333333343"/>
+                                <rect key="frame" x="20" y="141.33333333333334" width="350" height="28.333333333333343"/>
                                 <color key="backgroundColor" systemColor="labelColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28.333333333333332" id="YjL-ZR-4Pc"/>
@@ -123,7 +123,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date       : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1nW-cg-pfK">
-                                <rect key="frame" x="20" y="98" width="76" height="22"/>
+                                <rect key="frame" x="20" y="98" width="75" height="21.666666666666671"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="1nW-cg-pfK" secondAttribute="height" multiplier="38:11" id="4g0-nT-HR5"/>
                                 </constraints>
@@ -132,7 +132,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="  insert preferred date" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="007-kA-9AU">
-                                <rect key="frame" x="101" y="98" width="269" height="22"/>
+                                <rect key="frame" x="105" y="98" width="265" height="21.666666666666671"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="007-kA-9AU" secondAttribute="height" multiplier="269:22" id="SFs-lp-poz"/>
@@ -158,14 +158,14 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="14a-gH-zTM">
-                                <rect key="frame" x="20" y="180" width="350" height="576"/>
+                                <rect key="frame" x="20" y="179.66666666666669" width="350" height="576.33333333333326"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zh8-6R-qA1">
-                                <rect key="frame" x="0.0" y="130.66666666666666" width="390" height="1"/>
+                                <rect key="frame" x="0.0" y="130.33333333333334" width="390" height="1"/>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="4WG-ph-18s"/>
@@ -178,7 +178,7 @@
                             <constraint firstItem="Zh8-6R-qA1" firstAttribute="top" secondItem="1nW-cg-pfK" secondAttribute="bottom" constant="10.666666666666671" id="3bW-Ug-HO4"/>
                             <constraint firstItem="14a-gH-zTM" firstAttribute="top" secondItem="KtC-4l-r9N" secondAttribute="bottom" constant="10" id="6Ox-KA-zmQ"/>
                             <constraint firstItem="Zh8-6R-qA1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8RJ-yj-H7J"/>
-                            <constraint firstItem="007-kA-9AU" firstAttribute="leading" secondItem="1nW-cg-pfK" secondAttribute="trailing" constant="5" id="9Lz-XA-9Zt"/>
+                            <constraint firstItem="007-kA-9AU" firstAttribute="leading" secondItem="1nW-cg-pfK" secondAttribute="trailing" constant="10" id="9Lz-XA-9Zt"/>
                             <constraint firstItem="KtC-4l-r9N" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="IaZ-U3-jvR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="14a-gH-zTM" secondAttribute="trailing" constant="20" id="IoN-gW-0vu"/>
                             <constraint firstItem="KtC-4l-r9N" firstAttribute="top" secondItem="Zh8-6R-qA1" secondAttribute="bottom" constant="9.9999999999999716" id="NWc-kk-2JT"/>
@@ -214,6 +214,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="descTV" destination="14a-gH-zTM" id="3ct-yO-Dew"/>
+                        <outlet property="saveAction" destination="AC9-Jf-g41" id="PLe-q2-BY4"/>
                         <outlet property="titleTF" destination="007-kA-9AU" id="PQw-Zm-VFz"/>
                     </connections>
                 </viewController>

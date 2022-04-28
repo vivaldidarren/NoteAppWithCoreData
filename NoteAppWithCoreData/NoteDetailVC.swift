@@ -44,7 +44,6 @@ class NoteDetailVC: UIViewController, UITextViewDelegate {
         }
     }
     
-    
     @objc func dateChange(datePicker: UIDatePicker) {
         titleTF.text = formatDate(date: datePicker.date)
     }
@@ -61,13 +60,6 @@ class NoteDetailVC: UIViewController, UITextViewDelegate {
             textView.textColor = UIColor.black
         }
     }
-
-//    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-//        if text == "\n" {
-//            textView.resignFirstResponder()
-//        }
-//        return true
-//    }
 
     func textViewDidEndEditing(_ textView: UITextView) {
         if textView.text == "" {
@@ -113,7 +105,6 @@ class NoteDetailVC: UIViewController, UITextViewDelegate {
             }
         }
     }
-    
 
     @IBAction func deleteAction(_ sender: Any) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate

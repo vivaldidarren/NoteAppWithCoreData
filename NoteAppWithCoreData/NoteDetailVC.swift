@@ -18,6 +18,15 @@ class NoteDetailVC: UIViewController, UITextViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let datePicker = UIDatePicker()
+        datePicker.datePickerMode = .date
+        datePicker.addTarget(self, action: #selector(dateChange(datePicker:)), for: UIControl.Event.valueChanged)
+        datePicker.frame.size = CGSize(width: 0, height: 300)
+        datePicker.preferredDatePickerStyle = .wheels
+        
+        titleTF.inputView = datePicker
+        titleTF.text = formatDate(date: Date())
+        
 //        descTV.layer.borderWidth = 0.5
 //        descTV.layer.cornerRadius = 10
         descTV.layer.borderColor = UIColor.systemGray3.cgColor
@@ -32,6 +41,16 @@ class NoteDetailVC: UIViewController, UITextViewDelegate {
             descTV.textColor = UIColor.lightGray
             descTV.returnKeyType = .done
         }
+    }
+    
+    @objc func dateChange(datePicker: UIDatePicker) {
+        titleTF.text = formatDate(date: datePicker.date)
+    }
+    
+    func formatDate(date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMMM dd, yyyy"
+        return formatter.string(from: date)
     }
     
     func textViewDidBeginEditing(_ textView: UITextView) {

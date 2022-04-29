@@ -73,9 +73,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.0" green="0.09515385204" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system"/>
+                                <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system" title=""/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="push" identifier="newNote" id="M1c-qb-P96"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="ryR-76-h0o"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -223,7 +223,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="M1c-qb-P96"/>
+        <segue reference="8Kc-8N-vOH"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="plus" catalog="system" width="128" height="113"/>

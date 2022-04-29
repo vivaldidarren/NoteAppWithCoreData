@@ -95,23 +95,41 @@ class NoteDetailVC: UIViewController, UITextViewDelegate {
     
 
     @IBAction func deleteAction(_ sender: Any) {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context: NSManagedObjectContext = appDelegate.persistentContainer.viewContext
+        showAlert()
+
+    }
+    
+    func showAlert() {
+        let alert = UIAlertController(title: "Do you want to delete this note?", message: "This action cannot be undone.", preferredStyle: .alert)
         
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Note")
-        do {
-            let results:NSArray = try context.fetch(request) as NSArray
-            for result in results {
-                let note = result as! Note
-                if(note == selectedNote){
-                    note.deletedDate = Date()
-                    try context.save()
-                    navigationController?.popViewController(animated: true)
+        alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: { action in
+            print("tapped dismiss")
+            self.dismiss(animated: true)
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { action in
+            print("tapped delete")
+            
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let context: NSManagedObjectContext = appDelegate.persistentContainer.viewContext
+
+            let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Note")
+            do {
+                let results:NSArray = try context.fetch(request) as NSArray
+                for result in results {
+                    let note = result as! Note
+                    if(note == self.selectedNote){
+                        note.deletedDate = Date()
+                        try context.save()
+                        self.navigationController?.popViewController(animated: true)
+                    }
                 }
+            } catch  {
+                print("fetch failed")
             }
-        } catch  {
-            print("fetch failed")
-        }
+        }))
+        
+        present(alert, animated: true)
     }
     
 }

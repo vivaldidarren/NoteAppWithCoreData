@@ -75,7 +75,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system" title=""/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="push" identifier="newNote" id="M1c-qb-P96"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="ryR-76-h0o"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -224,7 +224,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="M1c-qb-P96"/>
+        <segue reference="8Kc-8N-vOH"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="plus" catalog="system" width="128" height="113"/>
